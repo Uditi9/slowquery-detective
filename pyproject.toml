@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "slowquery-detective"
+version = "0.1.0"
+description = "Rank PostgreSQL slow-query log offenders and get index hints."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Uditi Chawla" }]
+
+[project.scripts]
+slowquery = "slowquery_detective.analyzer:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
